@@ -1,13 +1,12 @@
 const myLibrary = [];
 
-function Book(options) {
+function Book(id, title, author, pages, isRead) {
   if (!new.target) {
     throw Error("Must use the new operator to call the function");
   }
-
-  this.options.id = options.id;
-  this.options.title = options.title;
-  this.options.author = options.author;
-  this.options.pages = options.pages;
-  this.options.isRead = options.isRead;
+  this.id = id;
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.isRead = isRead;
 }

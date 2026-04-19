@@ -5,6 +5,22 @@ html {
 
 /* Custom properties */
 :root {
+  /* Brand */
+  --color-primary: #1a365d;
+  --color-secondary: #77574d;
+  --color-neutral: #43474e;
+  --color-danger: #bc1720;
+  /* Backgrounds */
+  --color-bg: #fbf8f1;
+  --color-bg-nav: #fcf9f4;
+  --color-bg-dropdown: #ebe8e3;
+  /* Hover states */
+  --color-hover-icon: #e5e2dd;
+  --color-hover-button-default: #f0ede8;
+  --color-hover-button-cancel: #ebe8e3;
+  --color-hover-button-dropdown: #e5e2dd;
+  --color-hover-card: #f9f6f1;
+  --color-hover-icon-read: #7e5e55;
   /* Typography */
   --font-family-body: "Manrope", sans-serif;
   --font-family-heading: "Newsreader", serif;

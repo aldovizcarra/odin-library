@@ -122,6 +122,10 @@ body {
   fill: var(--color-primary);
 }
 
+.nav-list {
+  display: flex;
+}
+
 .nav-item {
   list-style-type: none;
 }

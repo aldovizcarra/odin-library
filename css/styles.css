@@ -125,3 +125,11 @@ body {
 .nav-item a {
   text-decoration: none;
 }
+
+.nav-title {
+  font-family: var(--font-family-heading);
+  font-style: italic;
+  font-weight: 700;
+  width: 24px;
+  color: var(--color-primary);
+}

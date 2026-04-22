@@ -114,3 +114,9 @@ body {
   background-color: var(--color-bg);
   color: var(--color-neutral);
 }
+
+/* Nav styles */
+.nav-icon {
+  width: 18px;
+  fill: var(--color-primary);
+}

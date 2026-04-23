@@ -12,7 +12,7 @@ html {
   --color-danger: #bc1720;
   /* Backgrounds */
   --color-bg: #fbf8f1;
-  --color-bg-nav: #fcf9f4;
+  --color-bg-nav: rgba(252, 249, 244, 0.7);
   --color-bg-dropdown: #ebe8e3;
   /* Hover states */
   --color-hover-icon: #e5e2dd;
@@ -119,6 +119,8 @@ body {
 /* Nav styles */
 .navbar {
   background-color: var(--color-bg-nav);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-nav);
   position: sticky;
   top: 0;

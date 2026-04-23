@@ -165,6 +165,7 @@ body {
   margin-left: auto;
 }
 
+/* Default content */
 .library-image {
   width: 100%;
 }
@@ -210,4 +211,5 @@ body {
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
+  width: clamp(192px, 25vw, 256px);
 }

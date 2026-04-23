@@ -162,3 +162,7 @@ body {
 .nav-right {
   margin-left: auto;
 }
+
+.library-image-container {
+  position: relative;
+}

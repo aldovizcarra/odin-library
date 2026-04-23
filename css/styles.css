@@ -116,6 +116,10 @@ body {
   font-family: var(--font-family-body);
 }
 
+.container {
+  padding: 24px;
+}
+
 /* Nav styles */
 .navbar {
   background-color: var(--color-bg-nav);

@@ -120,6 +120,9 @@ body {
 .navbar {
   background-color: var(--color-bg-nav);
   box-shadow: var(--shadow-nav);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-icon {

@@ -114,6 +114,8 @@ body {
   background-color: var(--color-bg);
   color: var(--color-neutral);
   font-family: var(--font-family-body);
+  height: auto;
+  min-height: 100%;
 }
 
 .container {

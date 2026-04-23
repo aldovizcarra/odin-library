@@ -188,4 +188,5 @@ body {
 .asymmetrical-detail {
   background-color: var(--color-secondary);
   width: 48px;
+  border-radius: var(--radius-xl);
 }

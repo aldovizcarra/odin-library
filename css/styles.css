@@ -169,6 +169,11 @@ body {
 .default {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.default > * {
+  grid-column: 1 / -1;
 }
 
 .library-image {
@@ -271,4 +276,15 @@ body {
 .book-icon {
   fill: var(--color-secondary);
   width: 20px;
+}
+
+@media (min-width: 768px) {
+  .default-add-button-container {
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+  .default-browse-button-container {
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
 }

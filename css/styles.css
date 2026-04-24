@@ -211,3 +211,11 @@ body {
   position: relative;
   width: max-content;
 }
+
+.default-heading h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary);
+  font-weight: 600;
+  text-align: center;
+}

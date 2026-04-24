@@ -284,7 +284,6 @@ body {
   gap: 8px;
   align-self: center;
   max-width: 252px;
-  padding: 16px 32px;
 }
 
 .default-browse-button:hover {

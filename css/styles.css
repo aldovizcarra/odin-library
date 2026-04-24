@@ -297,6 +297,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .default-hero-image {
+    margin-top: 62px;
+  }
   .default-add-button-container {
     grid-column: 1 / 2;
     justify-self: end;

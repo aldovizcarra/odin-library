@@ -232,8 +232,12 @@ body {
 
 .default-add-button,
 .default-browse-button {
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
   max-width: 227px;
-  padding: 16px 32px;
+  padding: 12px 30px;
   border: none;
   border-radius: var(--radius-sm);
 }
@@ -242,6 +246,9 @@ body {
   background-color: var(--color-primary);
   color: #fff;
   font-weight: 500;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .default-browse-button {
@@ -252,5 +259,5 @@ body {
 
 .add-box-icon {
   fill: #fff;
-  width: 16px;
+  width: 20px;
 }

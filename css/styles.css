@@ -216,6 +216,11 @@ body {
 .default-hero-image {
   position: relative;
   width: max-content;
+  margin-top: 75px;
+}
+
+.default-heading {
+  margin-top: 48px;
 }
 
 .default-heading h2 {
@@ -231,9 +236,21 @@ body {
   font-style: italic;
 }
 
+.default-description {
+  margin-top: 24px;
+}
+
 .default-description p {
   font-size: var(--font-size-lg);
   text-align: center;
+}
+
+.default-add-button-container {
+  margin-top: 56px;
+}
+
+.default-browse-button-container {
+  margin-top: 16px;
 }
 
 .default-add-button,
@@ -282,9 +299,11 @@ body {
   .default-add-button-container {
     grid-column: 1 / 2;
     justify-self: end;
+    margin-top: 56px;
   }
   .default-browse-button-container {
     grid-column: 2 / 3;
     justify-self: start;
+    margin-top: 56px;
   }
 }

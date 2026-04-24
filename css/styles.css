@@ -16,7 +16,8 @@ html {
   --color-bg-dropdown: #ebe8e3;
   /* Hover states */
   --color-hover-icon: #e5e2dd;
-  --color-hover-button-default: #f0ede8;
+  --color-hover-button-default-add: #2a527a;
+  --color-hover-button-default-browse: #f0ede8;
   --color-hover-button-cancel: #ebe8e3;
   --color-hover-button-dropdown: #e5e2dd;
   --color-hover-card: #f9f6f1;
@@ -276,6 +277,10 @@ body {
   align-items: center;
 }
 
+.default-add-button:hover {
+  background-color: var(--color-hover-button-default-add);
+}
+
 .default-browse-button {
   background-color: var(--color-bg);
   color: var(--color-secondary);
@@ -287,7 +292,7 @@ body {
 }
 
 .default-browse-button:hover {
-  background-color: var(--color-hover-button-default);
+  background-color: var(--color-hover-button-default-browse);
 }
 
 .add-box-icon {

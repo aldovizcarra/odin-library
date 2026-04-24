@@ -308,6 +308,7 @@ body {
     grid-column: 1 / 2;
     justify-self: end;
     margin-top: 56px;
+    margin-right: 16px;
   }
   .default-browse-button-container {
     grid-column: 2 / 3;

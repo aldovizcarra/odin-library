@@ -287,6 +287,10 @@ body {
   padding: 16px 32px;
 }
 
+.default-browse-button:hover {
+  background-color: var(--color-hover-button-default);
+}
+
 .add-box-icon {
   fill: #fff;
   width: 20px;

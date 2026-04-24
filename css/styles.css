@@ -218,4 +218,5 @@ body {
   color: var(--color-primary);
   font-weight: 600;
   text-align: center;
+  line-height: 1.3;
 }

@@ -239,6 +239,7 @@ body {
 .default-description {
   max-width: 425px;
   margin-top: 24px;
+  line-height: 1.3;
 }
 
 .default-description p {
@@ -309,5 +310,8 @@ body {
     grid-column: 2 / 3;
     justify-self: start;
     margin-top: 56px;
+  }
+  .default-description {
+    line-height: 1.4;
   }
 }

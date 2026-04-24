@@ -166,13 +166,19 @@ body {
 }
 
 /* Default content */
+.default {
+  display: grid;
+  place-items: center;
+}
+
 .library-image {
-  width: 100%;
+  width: clamp(192px, 25vw, 256px);
 }
 
 .library-image-container {
   position: relative;
-  grid-area: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
 .library-image-container::before {
@@ -189,27 +195,21 @@ body {
 
 .asymmetrical-detail {
   background-color: var(--color-secondary);
-  width: 48px;
-  height: 48px;
   border-radius: var(--radius-xl);
   display: grid;
   place-content: center;
   padding: 12px;
   bottom: -20px;
   right: -20px;
-  grid-area: 1 / 1;
   z-index: 1;
   position: absolute;
 }
 
 .feather-icon {
-  width: 18px;
+  width: 16px;
   fill: #fff;
 }
 
 .default-hero-image {
-  display: grid;
   position: relative;
-  grid-template-columns: 1fr;
-  width: clamp(192px, 25vw, 256px);
 }

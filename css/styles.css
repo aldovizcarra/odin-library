@@ -168,7 +168,7 @@ body {
 /* Default content */
 .default {
   display: grid;
-  place-items: center;
+  /* place-items: center; */
 }
 
 .library-image {
@@ -210,4 +210,5 @@ body {
 
 .default-hero-image {
   position: relative;
+  width: max-content;
 }

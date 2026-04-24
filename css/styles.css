@@ -229,3 +229,23 @@ body {
   font-size: var(--font-size-lg);
   text-align: center;
 }
+
+.default-add-button,
+.default-browse-button {
+  max-width: 227px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+
+.default-add-button {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+}
+
+.default-browse-button {
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+  font-weight: 400;
+}

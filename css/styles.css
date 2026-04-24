@@ -249,3 +249,8 @@ body {
   color: var(--color-secondary);
   font-weight: 400;
 }
+
+.add-box-icon {
+  fill: #fff;
+  width: 16px;
+}

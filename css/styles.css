@@ -255,9 +255,19 @@ body {
   background-color: var(--color-bg);
   color: var(--color-secondary);
   font-weight: 400;
+  display: flex;
+  gap: 8px;
+  align-self: center;
+  max-width: 252px;
+  padding: 16px 32px;
 }
 
 .add-box-icon {
   fill: #fff;
+  width: 20px;
+}
+
+.book-icon {
+  fill: var(--color-secondary);
   width: 20px;
 }

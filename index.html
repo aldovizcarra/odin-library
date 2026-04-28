@@ -79,6 +79,45 @@
                     </svg>Browse Curated Lists</button>
             </div>
         </div>
+
+        <dialog id="modal" open>
+            <form method="dialog">
+                <div class="modal-heading-container">
+                    <button class="form-close-btn" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 -960 960 960" class="close-icon">
+                            <path
+                                d="M256-213.85 213.85-256l224-224-224-224L256-746.15l224 224 224-224L746.15-704l-224 224 224 224L704-213.85l-224-224-224 224Z" />
+                        </svg></button>
+                    <h2 class="modal-heading">new volume</h2>
+                    <p>add to private archive</p>
+                </div>
+                <ul class="modal-list">
+                    <li class="modal-input">
+                        <label for="author">author / scholar</label>
+                        <input type="text" id="author" name="author" placeholder="e.g. Umberto Eco">
+                    </li>
+                    <li class="modal-input">
+                        <label for="title">title of work</label>
+                        <input type="text" id="title" name="title" placeholder="The Name of the Rose">
+                    </li>
+                    <li class="modal-input">
+                        <label for="pages">page count</label>
+                        <input type="number" id="pages" name="pages" placeholder="512" min="1">
+                    </li>
+                    <li class="modal-input">
+                        <label class="field-label">Read Status</label>
+                        <label for="read-status" class="toggle-label">
+                            <input type="checkbox" name="isRead" id="read-status" class="toggle-input">
+                            <span class="toggle-track">
+                                <span class="toggle-thumb"></span>
+                            </span>
+                            Finished Reading
+                        </label>
+                    </li>
+                </ul>
+
+            </form>
+        </dialog>
     </div>
 </body>
 

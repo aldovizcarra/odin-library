@@ -334,6 +334,14 @@ dialog::backdrop {
   fill: #43474e;
 }
 
+.modal-heading {
+  font-size: var(--font-size-3xl);
+  color: #002045;
+  font-family: var(--font-family-heading);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

@@ -305,6 +305,18 @@ body {
   width: 20px;
 }
 
+/* Modal */
+dialog {
+  border: 1px solid red;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 512px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

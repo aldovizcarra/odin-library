@@ -307,7 +307,7 @@ body {
 
 /* Modal */
 dialog {
-  border: 1px solid red;
+  border: none;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -315,10 +315,23 @@ dialog {
   max-width: 512px;
   max-height: 90vh;
   overflow-y: auto;
+  background-color: #fcf9f4;
+  border-radius: var(--radius-lg);
 }
 
 dialog::backdrop {
   background: rgb(0, 32, 69, 0.4);
+}
+
+.form-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 18px;
+  fill: #43474e;
 }
 
 @media (min-width: 768px) {

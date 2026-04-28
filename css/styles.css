@@ -317,6 +317,10 @@ dialog {
   overflow-y: auto;
 }
 
+dialog::backdrop {
+  background: rgb(0, 32, 69, 0.4);
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

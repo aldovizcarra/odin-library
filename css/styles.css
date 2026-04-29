@@ -327,10 +327,13 @@ dialog::backdrop {
   background: none;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 .close-icon {
-  width: 18px;
+  width: 20px;
   fill: #43474e;
 }
 
@@ -347,6 +350,10 @@ dialog::backdrop {
   font-size: var(--font-size-3xs);
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.modal-heading-container {
+  position: relative;
 }
 
 @media (min-width: 768px) {

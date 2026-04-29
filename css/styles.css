@@ -342,6 +342,12 @@ dialog::backdrop {
   font-weight: 700;
 }
 
+.modal-heading-container p {
+  font-size: var(--font-size-3xs);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

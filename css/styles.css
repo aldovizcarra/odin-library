@@ -363,6 +363,11 @@ dialog::backdrop {
   margin: 40px 0;
 }
 
+.modal-input {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

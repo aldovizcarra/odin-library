@@ -360,6 +360,7 @@ dialog::backdrop {
 
 .modal-list {
   list-style-type: none;
+  margin: 40px 0;
 }
 
 @media (min-width: 768px) {

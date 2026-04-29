@@ -308,7 +308,7 @@ body {
 /* Modal */
 dialog {
   border: 1px solid black;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -352,6 +352,7 @@ dialog::backdrop {
   font-size: var(--font-size-3xs);
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-neutral);
 }
 
 .modal-heading-container {
@@ -361,11 +362,45 @@ dialog::backdrop {
 .modal-list {
   list-style-type: none;
   margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 24px;
+  column-gap: 20px;
 }
 
 .modal-input {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #c4c6cf;
+  grid-column: 1 / -1;
+}
+
+.modal-input:nth-last-child(2) {
+  grid-column: 1;
+}
+
+.modal-input:last-child {
+  grid-column: 2 / 3;
+  border: none;
+}
+
+.modal-input label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-neutral);
+}
+
+.modal-input input {
+  background-color: #fcf9f4;
+  outline: none;
+  border: none;
+  padding: 14px 0;
+}
+
+.modal-input input::placeholder {
+  font-size: var(--font-size-lg);
+  color: #c4c6cf;
 }
 
 @media (min-width: 768px) {

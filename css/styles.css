@@ -408,6 +408,33 @@ dialog::backdrop {
   text-transform: capitalize;
 }
 
+.form-button,
+.form-cancel-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: var(--font-size-md);
+  padding: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-button {
+  background-color: #002045;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow:
+    0 10px 15px -3px rgb(0, 32, 69, 0.2),
+    0 4px 6px -4px rgb(0, 32, 69, 0.2);
+}
+
+.form-cancel-button {
+  color: var(--color-neutral);
+  background-color: #fcf9f4;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

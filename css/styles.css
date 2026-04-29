@@ -340,6 +340,7 @@ dialog::backdrop {
   font-family: var(--font-family-heading);
   text-transform: capitalize;
   font-weight: 700;
+  line-height: 1;
 }
 
 .modal-heading-container p {

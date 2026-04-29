@@ -403,6 +403,11 @@ dialog::backdrop {
   color: #c4c6cf;
 }
 
+.modal-input .toggle-label {
+  font-size: var(--font-size-xs);
+  text-transform: capitalize;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

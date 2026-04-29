@@ -358,6 +358,10 @@ dialog::backdrop {
   position: relative;
 }
 
+.modal-list {
+  list-style-type: none;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

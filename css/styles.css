@@ -307,7 +307,7 @@ body {
 
 /* Modal */
 dialog {
-  border: none;
+  border: 1px solid black;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -317,6 +317,8 @@ dialog {
   overflow-y: auto;
   background-color: #fcf9f4;
   border-radius: var(--radius-lg);
+  z-index: 100;
+  padding: 24px 32px;
 }
 
 dialog::backdrop {

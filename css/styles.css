@@ -430,9 +430,18 @@ dialog::backdrop {
     0 4px 6px -4px rgb(0, 32, 69, 0.2);
 }
 
+.form-button:hover {
+  background-color: var(--color-hover-button-default-add);
+}
+
 .form-cancel-button {
   color: var(--color-neutral);
   background-color: #fcf9f4;
+}
+
+.form-cancel-button:hover {
+  background-color: var(--color-hover-button-cancel);
+  color: var(--color-primary);
 }
 
 @media (min-width: 768px) {

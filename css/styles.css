@@ -492,8 +492,33 @@ dialog::backdrop {
 
 /* FAB */
 .fab-icon {
-  width: 18px;
+  width: 28px;
   fill: #fff;
+  transition: transform 0.3s ease;
+}
+
+.fab {
+  border: none;
+  padding: 24px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  position: fixed;
+  bottom: 34px;
+  right: 32px;
+  display: none;
+}
+
+.fab:hover {
+  background-color: var(--color-hover-button-default-add);
+}
+
+.fab:hover .fab-icon {
+  transform: rotate(90deg);
+}
+
+.active {
+  display: block;
 }
 
 @media (min-width: 768px) {

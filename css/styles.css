@@ -258,10 +258,8 @@ body {
 
 .default-add-button,
 .default-browse-button {
-  appearance: none;
   background: none;
   cursor: pointer;
-  outline: none;
   max-width: 227px;
   padding: 12px 30px;
   border: none;

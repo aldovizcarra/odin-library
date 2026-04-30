@@ -490,6 +490,12 @@ dialog::backdrop {
   cursor: pointer;
 }
 
+/* FAB */
+.fab-icon {
+  width: 18px;
+  fill: #fff;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

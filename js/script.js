@@ -1,10 +1,10 @@
 const myLibrary = [];
 
-function Book({ id, title, author, pages, isRead }) {
+function Book({ title, author, pages, isRead }) {
   if (!new.target) {
     throw Error("Must use the new operator to call the function");
   }
-  this.id = id;
+  this.id = crypto.randomUUID();
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -13,6 +13,5 @@ function Book({ id, title, author, pages, isRead }) {
 
 function addBookToLibrary(book) {
   const newBook = new Book(book);
-  newBook.id = crypto.randomUUID();
   myLibrary.push(newBook);
 }

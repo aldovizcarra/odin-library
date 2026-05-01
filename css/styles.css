@@ -303,6 +303,65 @@ body {
   width: 20px;
 }
 
+/* Hero */
+.hero-container {
+  margin: 32px 0 64px;
+  display: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.hero > * {
+  grid-column: 1 / -1;
+}
+
+.down-arrow-icon {
+  width: 12px;
+  fill: #1c1c19;
+}
+
+.hero-eyebrow {
+  font-size: var(--font-size-xs);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(var(--font-size-5xl), 5vw + 1rem, var(--font-size-7xl));
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 468px;
+}
+
+.hero-sort-btn {
+  border: none;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-neutral);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-bg-dropdown);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 1.2px;
+  width: max-content;
+  height: max-content;
+}
+
 /* Modal */
 dialog {
   border: none;
@@ -519,6 +578,10 @@ dialog::backdrop {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;
@@ -536,5 +599,15 @@ dialog::backdrop {
   }
   .default-description {
     line-height: 1.4;
+  }
+  .hero-eyebrow,
+  .hero-title,
+  .hero-subtitle {
+    grid-column: 1;
+  }
+  .hero-sort-btn {
+    grid-column: 2 / 3;
+    align-self: end;
+    justify-self: end;
   }
 }

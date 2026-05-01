@@ -1,4 +1,8 @@
 const myLibrary = [];
+const modal = document.querySelector("#modal");
+const defaultBtn = document.querySelector(".default-add-button");
+const deleteBtn = document.querySelector(".form-close-btn");
+const cancelBtn = document.querySelector("#form-cancel-button");
 
 function Book({ title, author, pages, isRead }) {
   if (!new.target) {
@@ -15,3 +19,15 @@ function addBookToLibrary(book) {
   const newBook = new Book(book);
   myLibrary.push(newBook);
 }
+
+defaultBtn.addEventListener("click", () => modal.showModal());
+deleteBtn.addEventListener("click", () => modal.close());
+cancelBtn.addEventListener("click", () => modal.close());
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.close();
+  }
+});
+modal.addEventListener("close", () => {
+  modal.querySelector("form").reset();
+});

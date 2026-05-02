@@ -40,7 +40,7 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="default">
+        <div id="default-container" class="default">
             <div class="default-hero-image">
                 <div class="library-image-container">
                     <img src="assets/images/hero-library.jpg" class="library-image" alt="hero library image">
@@ -64,8 +64,8 @@
             </div>
 
             <div class="default-add-button-container">
-                <button class="default-add-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                        stroke="currentColor" class="add-box-icon">
+                <button id="open-form-button" class="default-add-button"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960" stroke="currentColor" class="add-box-icon">
                         <path
                             d="M450-290h60v-160h160v-60H510v-160h-60v160H290v60h160v160ZM212.31-140Q182-140 161-161q-21-21-21-51.31v-535.38Q140-778 161-799q21-21 51.31-21h535.38Q778-820 799-799q21 21 21 51.31v535.38Q820-182 799-161q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-535.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v535.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-760v560-560Z" />
                     </svg>Add First Volume</button>
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="hero-container">
+        <div id="hero-section" class="hero-container">
             <div class="hero">
                 <p class="hero-eyebrow">private collection</p>
                 <h1 class="hero-title">curated archives</h1>
@@ -99,7 +99,7 @@
     <dialog id="modal">
         <form method="dialog">
             <div class="modal-heading-container">
-                <button class="form-close-btn" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg"
+                <button id="close-btn" class="form-close-btn" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 -960 960 960" class="close-icon">
                         <path
                             d="M256-213.85 213.85-256l224-224-224-224L256-746.15l224 224 224-224L746.15-704l-224 224 224 224L704-213.85l-224-224-224 224Z" />
@@ -131,12 +131,12 @@
                     </label>
                 </li>
             </ul>
-            <button class="form-button" type="submit">Save to Collection</button>
-            <button class="form-cancel-button" type="button" id="form-cancel-button">Cancel</button>
+            <button id="submit-button" class="form-button" type="submit">Save to Collection</button>
+            <button id="form-cancel-button" class="form-cancel-button" type="button">Cancel</button>
         </form>
     </dialog>
-    <button id="fab" class="fab" aria-label="Add book"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-            class="fab-icon">
+    <button id="fab-btn" class="fab" aria-label="Add book"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960" class="fab-icon">
             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
         </svg>
     </button>

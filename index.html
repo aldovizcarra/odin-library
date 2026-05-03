@@ -101,8 +101,8 @@
     <dialog id="modal">
         <form method="dialog">
             <div class="modal-heading-container">
-                <button id="close-btn" class="form-close-btn" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960" class="close-icon">
+                <button id="close-btn" data-action="close-form" class="form-close-btn" aria-label="Close"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="close-icon">
                         <path
                             d="M256-213.85 213.85-256l224-224-224-224L256-746.15l224 224 224-224L746.15-704l-224 224 224 224L704-213.85l-224-224-224 224Z" />
                     </svg></button>
@@ -133,12 +133,14 @@
                     </label>
                 </li>
             </ul>
-            <button id="submit-button" class="form-button" type="submit">Save to Collection</button>
-            <button id="form-cancel-button" class="form-cancel-button" type="button">Cancel</button>
+            <button id="submit-button" data-action="add-book" class="form-button" type="submit">Save to
+                Collection</button>
+            <button id="form-cancel-button" data-action="close-form" class="form-cancel-button"
+                type="button">Cancel</button>
         </form>
     </dialog>
-    <button id="fab-btn" class="fab" aria-label="Add book"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960" class="fab-icon">
+    <button id="fab-btn" data-action="open-modal" class="fab" aria-label="Add book"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="fab-icon">
             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
         </svg>
     </button>

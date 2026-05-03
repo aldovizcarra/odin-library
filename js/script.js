@@ -31,15 +31,46 @@ function getFormData() {
   console.log(normalizedUser);
 }
 
-fab.addEventListener("click", () => modal.showModal());
-defaultBtn.addEventListener("click", () => modal.showModal());
-closeBtn.addEventListener("click", () => modal.close());
-cancelBtn.addEventListener("click", () => modal.close());
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.close();
-  }
-});
-modal.addEventListener("close", () => {
+function closeModal() {
+  modal.close();
+}
+
+function openModal() {
+  modal.showModal();
+}
+
+function resetForm() {
   modal.querySelector("form").reset();
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.tagName === "DIALOG") closeModal();
+
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+
+  const action = el.dataset.action;
+  if (action === "open-modal") openModal();
+  if (action === "close-form") closeModal();
 });
+
+document.addEventListener(
+  "close",
+  (e) => {
+    if (e.target.tagName === "DIALOG") resetForm();
+  },
+  true,
+);
+
+// fab.addEventListener("click", () => modal.showModal());
+// defaultBtn.addEventListener("click", () => modal.showModal());
+// closeBtn.addEventListener("click", () => modal.close());
+// cancelBtn.addEventListener("click", () => modal.close());
+// modal.addEventListener("click", (e) => {
+//   if (e.target === modal) {
+//     modal.close();
+//   }
+// });
+// modal.addEventListener("close", () => {
+//   modal.querySelector("form").reset();
+// });

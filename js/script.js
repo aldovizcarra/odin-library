@@ -21,6 +21,16 @@ function addBookToLibrary(book) {
   myLibrary.push(newBook);
 }
 
+function getFormData() {
+  const formDate = new FormData(e.target);
+  const userObject = Object.fromEntries(formDate.entries());
+  const normalizedUser = {
+    ...userObject,
+    isRead: userObject.isRead === "on",
+  };
+  console.log(normalizedUser);
+}
+
 fab.addEventListener("click", () => modal.showModal());
 defaultBtn.addEventListener("click", () => modal.showModal());
 closeBtn.addEventListener("click", () => modal.close());

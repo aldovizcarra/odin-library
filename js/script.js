@@ -21,14 +21,14 @@ function addBookToLibrary(book) {
   myLibrary.push(newBook);
 }
 
-function getFormData() {
-  const formDate = new FormData(e.target);
+function getFormData(form) {
+  const formDate = new FormData(form);
   const userObject = Object.fromEntries(formDate.entries());
   const normalizedUser = {
     ...userObject,
     isRead: userObject.isRead === "on",
   };
-  console.log(normalizedUser);
+  return normalizedUser;
 }
 
 function closeModal() {
@@ -62,15 +62,11 @@ document.addEventListener(
   true,
 );
 
-// fab.addEventListener("click", () => modal.showModal());
-// defaultBtn.addEventListener("click", () => modal.showModal());
-// closeBtn.addEventListener("click", () => modal.close());
-// cancelBtn.addEventListener("click", () => modal.close());
-// modal.addEventListener("click", (e) => {
-//   if (e.target === modal) {
-//     modal.close();
-//   }
-// });
-// modal.addEventListener("close", () => {
-//   modal.querySelector("form").reset();
-// });
+document.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const bookObj = getFormData(e.target);
+  addBookToLibrary(bookObj);
+  resetForm();
+  closeModal();
+  console.log(myLibrary);
+});

@@ -35,6 +35,18 @@ function getFormData(form) {
   return normalizedUser;
 }
 
+function updateStatusDisplay(clone, isRead) {
+  const element = clone.querySelector("#status-badge");
+
+  if (isRead) {
+    element.textContent = "complete";
+    element.classList.add("book-complete");
+  } else {
+    element.textContent = "unread";
+    element.classList.add("book-unread");
+  }
+}
+
 function closeModal() {
   modal.close();
 }

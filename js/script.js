@@ -113,27 +113,27 @@ function toggleReadStatus(event) {
 
 function renderLibrary() {
   const template = document.querySelector("#card-template");
-  const container = querySelector("#card-container");
+  const container = document.querySelector("#card-container");
 
   container.replaceChildren();
 
   myLibrary.forEach((book) => {
     const clone = template.content.cloneNode(true);
+    const button = clone.querySelector(".read-status-button");
     updateStatusDisplay(clone, book.isRead);
     clone.querySelector(".card").dataset.id = book.id;
     clone.querySelector(".card-title").textContent = book.title;
     clone.querySelector(".card-author").textContent = book.author;
     clone.querySelector(".card-pages").textContent = `${book.pages} pages`;
-    clone.querySelector(".read-status-button").textContent = getIcon(
-      book.isRead,
-    );
+    button.appendChild(getIcon(book.isRead));
     container.prepend(clone);
   });
 }
 
 function showLibrary() {
-  const defaultDiv = querySelector("#default-container");
-
+  const defaultDiv = document.querySelector("#default-container");
+  const hero = document.querySelector("#hero-section");
+  const fab = document.querySelector("#fab-btn");
   if (hero.classList.contains("active")) {
     renderLibrary();
     return;

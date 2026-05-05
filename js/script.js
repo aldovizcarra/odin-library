@@ -38,6 +38,7 @@ function addBookToLibrary(book) {
 
 const modal = document.querySelector("#modal");
 
+
 // ============================================================
 // Modal
 // ============================================================
@@ -109,6 +110,24 @@ function toggleReadStatus(event) {
   const book = myLibrary.find((b) => b.id === id);
   book.toggleIsRead();
   renderLibrary();
+}
+
+function renderLibrary() {
+  const template = document.querySelector(#card-template);
+  const container = querySelector("#card-container");
+
+  container.replaceChildren();
+
+  myLibrary.forEach(book => {
+    const clone = template.content.cloneNode(true);
+    updateStatusDisplay(clone, book.isRead);
+    clone.querySelector(".card").dataset.id = book.id;
+    clone.querySelector(".card-title").textContent = book.title;
+    clone.querySelector(".card-author").textContent = book.author;
+    clone.querySelector(".card-pages").textContent = book.pages;
+    clone.querySelector(".read-status-button").textContent = getIcon(book.isRead);
+    container.prepend(clone);
+  });
 }
 
 // ============================================================

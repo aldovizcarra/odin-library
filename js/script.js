@@ -1,9 +1,5 @@
 const myLibrary = [];
 const modal = document.querySelector("#modal");
-const defaultBtn = document.querySelector("#open-form-button");
-const closeBtn = document.querySelector("#close-btn");
-const cancelBtn = document.querySelector("#form-cancel-button");
-const fab = document.querySelector("#fab-btn");
 
 function Book({ title, author, pages, isRead }) {
   if (!new.target) {

@@ -188,5 +188,5 @@ document.addEventListener("submit", (e) => {
   addBookToLibrary(bookObj);
   resetForm();
   closeModal();
-  console.log(myLibrary);
+  showLibrary();
 });

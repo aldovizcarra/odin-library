@@ -131,6 +131,20 @@ function renderLibrary() {
   });
 }
 
+function showLibrary() {
+  const defaultDiv = querySelector("#default-container");
+
+  if (hero.classList.contains("active")) {
+    renderLibrary();
+    return;
+  }
+
+  defaultDiv.classList.add("hidden");
+  hero.classList.add("active");
+  fab.classList.add("active");
+  renderLibrary();
+}
+
 // ============================================================
 // Form
 // ============================================================

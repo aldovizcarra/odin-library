@@ -84,6 +84,18 @@ function getIcon(isRead) {
   return isRead ? circleXmarkIcon : checkIcon;
 }
 
+function updateStatusDisplay(root, isRead) {
+  const span = root.querySelector(".card-status");
+
+  if (isRead) {
+    span.textContent = "complete";
+    span.classList.add("card-status-complete");
+  } else {
+    span.textContent = "unread";
+    span.classList.add("card-status-unread");
+  }
+}
+
 function closeModal() {
   modal.close();
 }

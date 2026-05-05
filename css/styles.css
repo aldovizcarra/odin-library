@@ -582,6 +582,29 @@ dialog::backdrop {
   display: none;
 }
 
+/* Card */
+.card {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--color-bg);
+}
+
+.card-status {
+  font-size: var(--font-size-3xs);
+}
+
+.card-title {
+  font-size: clamp(var(--font-size-3xl), 5vw + 1rem, var(--font-size-4xl));
+}
+
+.card-author {
+  font-size: var(--font-size-base);
+}
+
+.card-pages {
+  font-size: var(--font-size-2xs);
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

@@ -1,5 +1,12 @@
+// ============================================================
+// Data
+// ============================================================
+
 const myLibrary = [];
-const modal = document.querySelector("#modal");
+
+// ============================================================
+// Book constructor
+// ============================================================
 
 function Book({ title, author, pages, isRead }) {
   if (!new.target) {
@@ -16,36 +23,40 @@ Book.prototype.toggleIsRead = function () {
   this.isRead = !this.isRead;
 };
 
+// ============================================================
+// Library
+// ============================================================
+
 function addBookToLibrary(book) {
   const newBook = new Book(book);
   myLibrary.push(newBook);
 }
 
-function getFormData(form) {
-  const formDate = new FormData(form);
-  const userObject = Object.fromEntries(formDate.entries());
-  const normalizedUser = {
-    ...userObject,
-    isRead: userObject.isRead === "on",
-  };
-  return normalizedUser;
+// ============================================================
+// DOM references
+// ============================================================
+
+const modal = document.querySelector("#modal");
+
+// ============================================================
+// Modal
+// ============================================================
+
+function openModal() {
+  modal.showModal();
 }
 
-function updateStatusDisplay(root, isRead) {
-  const span = root.querySelector(".card-status");
-
-  span.textContent = isRead ? "complete" : "unread";
-  span.classList.toggle("card-status-complete", isRead);
-  span.classList.toggle("card-status-unread", !isRead);
+function closeModal() {
+  modal.close();
 }
 
-function toggleReadStatus(event) {
-  const el = event.target.closest("[data-id]");
-  const id = el.dataset.id;
-  const book = myLibrary.find((b) => b.id === id);
-  book.toggleIsRead();
-  renderLibrary();
+function resetForm() {
+  modal.querySelector("form").reset();
 }
+
+// ============================================================
+// Rendering
+// ============================================================
 
 function getIcon(isRead) {
   const checkIcon = document.createElementNS(
@@ -84,17 +95,39 @@ function getIcon(isRead) {
   return isRead ? circleXmarkIcon : checkIcon;
 }
 
-function closeModal() {
-  modal.close();
+function updateStatusDisplay(root, isRead) {
+  const span = root.querySelector(".card-status");
+
+  span.textContent = isRead ? "complete" : "unread";
+  span.classList.toggle("card-status-complete", isRead);
+  span.classList.toggle("card-status-unread", !isRead);
 }
 
-function openModal() {
-  modal.showModal();
+function toggleReadStatus(event) {
+  const el = event.target.closest("[data-id]");
+  const id = el.dataset.id;
+  const book = myLibrary.find((b) => b.id === id);
+  book.toggleIsRead();
+  renderLibrary();
 }
 
-function resetForm() {
-  modal.querySelector("form").reset();
+// ============================================================
+// Form
+// ============================================================
+
+function getFormData(form) {
+  const formDate = new FormData(form);
+  const userObject = Object.fromEntries(formDate.entries());
+  const normalizedUser = {
+    ...userObject,
+    isRead: userObject.isRead === "on",
+  };
+  return normalizedUser;
 }
+
+// ============================================================
+// Event listeners
+// ============================================================
 
 document.addEventListener("click", (e) => {
   if (e.target.tagName === "DIALOG") closeModal();

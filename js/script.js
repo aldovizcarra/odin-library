@@ -35,16 +35,12 @@ function getFormData(form) {
   return normalizedUser;
 }
 
-function updateStatusDisplay(clone, isRead) {
-  const element = clone.querySelector("#status-badge");
+function updateStatusDisplay(root, isRead) {
+  const span = root.querySelector(".card-status");
 
-  if (isRead) {
-    element.textContent = "complete";
-    element.classList.add("book-complete");
-  } else {
-    element.textContent = "unread";
-    element.classList.add("book-unread");
-  }
+  span.textContent = isRead ? "complete" : "unread";
+  span.classList.toggle("card-status-complete", isRead);
+  span.classList.toggle("card-status-unread", !isRead);
 }
 
 function getIcon(isRead) {
@@ -82,18 +78,6 @@ function getIcon(isRead) {
   circleXmarkIcon.appendChild(xMarkPath);
 
   return isRead ? circleXmarkIcon : checkIcon;
-}
-
-function updateStatusDisplay(root, isRead) {
-  const span = root.querySelector(".card-status");
-
-  if (isRead) {
-    span.textContent = "complete";
-    span.classList.add("card-status-complete");
-  } else {
-    span.textContent = "unread";
-    span.classList.add("card-status-unread");
-  }
 }
 
 function closeModal() {

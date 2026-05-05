@@ -43,6 +43,14 @@ function updateStatusDisplay(root, isRead) {
   span.classList.toggle("card-status-unread", !isRead);
 }
 
+function toggleReadStatus(event) {
+  const el = event.target.closest("[data-id]");
+  const id = el.dataset.id;
+  const book = myLibrary.find((b) => b.id === id);
+  book.toggleIsRead();
+  renderLibrary();
+}
+
 function getIcon(isRead) {
   const checkIcon = document.createElementNS(
     "http://www.w3.org/2000/svg",

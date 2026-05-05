@@ -605,6 +605,11 @@ dialog::backdrop {
   font-size: var(--font-size-2xs);
 }
 
+.check-icon,
+.xmark-icon {
+  width: 16px;
+}
+
 @media (min-width: 768px) {
   .default-hero-image {
     margin-top: 62px;

@@ -638,8 +638,45 @@ dialog::backdrop {
 .check-icon,
 .xmark-icon,
 .remove-icon {
-  width: 16px;
+  width: 18px;
   fill: var(--color-neutral);
+  opacity: 0.6;
+}
+
+.read-status-button,
+.delete-button {
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-bg);
+}
+
+.read-status-button:has(svg.xmark-icon):hover {
+  background-color: rgb(188, 23, 32, 0.125);
+}
+
+.read-status-button:hover .xmark-icon {
+  fill: var(--color-danger);
+  opacity: 1;
+}
+
+.read-status-button:has(svg.check-icon):hover {
+  background-color: rgba(34, 197, 94, 0.125);
+}
+
+.read-status-button:hover .check-icon {
+  fill: rgba(34, 197, 94);
+  opacity: 1;
+}
+
+.delete-button:hover {
+  background-color: rgb(188, 23, 32, 0.125);
+}
+
+.delete-button:hover .remove-icon {
+  fill: var(--color-danger);
+  opacity: 1;
 }
 
 @media (min-width: 768px) {

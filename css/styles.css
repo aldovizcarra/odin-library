@@ -610,6 +610,11 @@ dialog::backdrop {
 
 .card-title {
   font-size: clamp(var(--font-size-3xl), 5vw + 1rem, var(--font-size-4xl));
+  line-height: 1.375;
+  font-family: var(--font-family-heading);
+  font-style: italic;
+  color: #002045;
+  font-weight: 500;
 }
 
 .card-author {

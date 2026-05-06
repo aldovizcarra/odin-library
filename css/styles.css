@@ -595,6 +595,17 @@ dialog::backdrop {
 
 .card-status {
   font-size: var(--font-size-3xs);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card-status-unread {
+  opacity: 0.4;
+}
+
+.card-status-complete {
+  color: var(--color-secondary);
 }
 
 .card-title {

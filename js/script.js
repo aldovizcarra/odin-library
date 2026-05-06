@@ -172,6 +172,7 @@ document.addEventListener("click", (e) => {
   const action = el.dataset.action;
   if (action === "open-modal") openModal();
   if (action === "close-form") closeModal();
+  if (action === "status-btn") toggleReadStatus(e);
 });
 
 document.addEventListener(

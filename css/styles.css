@@ -606,8 +606,11 @@ dialog::backdrop {
 }
 
 .check-icon,
-.xmark-icon {
+.xmark-icon,
+.remove-icon {
   width: 16px;
+  fill: var(--color-neutral);
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {

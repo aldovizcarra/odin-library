@@ -587,6 +587,9 @@ dialog::backdrop {
   display: grid;
   grid-template-columns: 3fr 1fr;
   background-color: var(--color-bg);
+  border-top: 1px solid #f1efed;
+  border-bottom: 1px solid #f1efed;
+  padding: 48px 0 76px;
 }
 
 .card > * {

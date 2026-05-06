@@ -707,4 +707,13 @@ dialog::backdrop {
     align-self: end;
     justify-self: end;
   }
+  .card > * {
+    grid-column: 1 / 2;
+  }
+  .card-buttons {
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+    align-self: center;
+    justify-self: end;
+  }
 }

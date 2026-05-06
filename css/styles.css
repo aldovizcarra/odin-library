@@ -589,6 +589,10 @@ dialog::backdrop {
   background-color: var(--color-bg);
 }
 
+.card > * {
+  grid-column: 1 / -1;
+}
+
 .card-status {
   font-size: var(--font-size-3xs);
 }
@@ -610,7 +614,6 @@ dialog::backdrop {
 .remove-icon {
   width: 16px;
   fill: var(--color-neutral);
-  font-weight: 600;
 }
 
 @media (min-width: 768px) {

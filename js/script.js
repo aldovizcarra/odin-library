@@ -145,6 +145,20 @@ function showLibrary() {
   renderLibrary();
 }
 
+function removeCard(event) {
+  const el = event.target.closest("[data-id]");
+  const id = el.dataset.id;
+
+  myLibrary.forEach((book) => {
+    if (book.id !== id) return;
+    const index = myLibrary.indexOf(book.id === id);
+    myLibrary.splice(index, 1);
+    el.remove();
+  });
+
+  renderLibrary();
+}
+
 // ============================================================
 // Form
 // ============================================================

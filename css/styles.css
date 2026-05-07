@@ -410,6 +410,18 @@ dialog::backdrop {
   right: 16px;
 }
 
+.form-close-btn::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.form-close-btn:hover:before {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 .close-icon {
   width: 20px;
   fill: #43474e;

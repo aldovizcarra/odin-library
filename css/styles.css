@@ -675,6 +675,10 @@ dialog::backdrop {
   font-weight: 400;
 }
 
+.card-buttons {
+  margin-top: 6px;
+}
+
 .check-icon,
 .xmark-icon,
 .remove-icon {
@@ -685,14 +689,28 @@ dialog::backdrop {
 
 .read-status-button,
 .delete-button {
-  padding: 8px;
-  border-radius: 50%;
   border: none;
   cursor: pointer;
   background-color: var(--color-bg);
 }
 
-.read-status-button:has(svg.xmark-icon):hover {
+.read-status-button {
+  margin-right: 16px;
+}
+
+.read-status-button:has(svg.xmark-icon) {
+  position: relative;
+}
+
+.read-status-button:has(svg.xmark-icon)::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.read-status-button:has(svg.xmark-icon):hover::before {
   background-color: rgb(188, 23, 32, 0.125);
 }
 
@@ -701,7 +719,19 @@ dialog::backdrop {
   opacity: 1;
 }
 
-.read-status-button:has(svg.check-icon):hover {
+.read-status-button:has(svg.check-icon) {
+  position: relative;
+}
+
+.read-status-button:has(svg.check-icon)::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.read-status-button:has(svg.check-icon):hover::before {
   background-color: rgba(34, 197, 94, 0.125);
 }
 
@@ -710,7 +740,19 @@ dialog::backdrop {
   opacity: 1;
 }
 
-.delete-button:hover {
+.delete-button {
+  position: relative;
+}
+
+.delete-button::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.delete-button:hover::before {
   background-color: rgb(188, 23, 32, 0.125);
 }
 
@@ -755,5 +797,8 @@ dialog::backdrop {
     grid-row: 1 / 5;
     align-self: center;
     justify-self: end;
+  }
+  .card-buttons {
+    margin: 0;
   }
 }

@@ -204,5 +204,6 @@ document.addEventListener("submit", (e) => {
   addBookToLibrary(bookObj);
   resetForm();
   closeModal();
+  window.scrollTo({ top: 0, behavior: "instant" });
   showLibrary();
 });

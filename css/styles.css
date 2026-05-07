@@ -540,6 +540,11 @@ dialog::backdrop {
   transform: translateX(20px);
 }
 
+.toggle-input:focus-visible + .toggle-track {
+  outline: 2px solid #095fca;
+  outline-offset: 2px;
+}
+
 .toggle-label {
   display: flex;
   align-items: center;

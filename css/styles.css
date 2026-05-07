@@ -157,6 +157,7 @@ body {
 .nav-item:first-child,
 .nav-item:last-child {
   position: relative;
+  cursor: pointer;
 }
 
 .nav-item:first-child::before,

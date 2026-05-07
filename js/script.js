@@ -151,7 +151,7 @@ function removeCard(event) {
 
   myLibrary.forEach((book) => {
     if (book.id !== id) return;
-    const index = myLibrary.indexOf(book.id === id);
+    const index = myLibrary.indexOf(book);
     myLibrary.splice(index, 1);
     el.remove();
   });
@@ -187,6 +187,7 @@ document.addEventListener("click", (e) => {
   if (action === "open-modal") openModal();
   if (action === "close-form") closeModal();
   if (action === "status-btn") toggleReadStatus(e);
+  if (action === "remove-btn") removeCard(e);
 });
 
 document.addEventListener(

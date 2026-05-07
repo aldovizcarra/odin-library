@@ -154,6 +154,25 @@ body {
   text-decoration: none;
 }
 
+.nav-item:first-child,
+.nav-item:last-child {
+  position: relative;
+}
+
+.nav-item:first-child::before,
+.nav-item:last-child::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.nav-item:first-child:hover::before,
+.nav-item:last-child:hover::before {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 .nav-title {
   font-size: var(--font-size-2xl);
   font-family: var(--font-family-heading);
